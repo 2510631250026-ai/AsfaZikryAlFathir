@@ -273,6 +273,33 @@ static String inputString(String pesan) {
     double uts = inputNilai("Nilai UTS: ");
     double uas = inputNilai("Nilai UAS: ");
 
+    // CEK APAKAH NIM PERNAH DIHAPUS
+    for (int i = 0; i < jumlahData; i++) {
+
+        if (data[i] != null &&
+            data[i].nim.equals(nim) &&
+            !data[i].aktif) {
+
+            System.out.println("NIM pernah dihapus, data akan digunakan kembali.");
+
+            data[i].nama = nama;
+            data[i].kategori = kategori;
+            data[i].nilaiTugas = tugas;
+            data[i].nilaiUTS = uts;
+            data[i].nilaiUAS = uas;
+            data[i].aktif = true;
+
+            data[i].hitungNilaiAkhir();
+            data[i].tentukanGrade();
+
+            simpanData();
+
+            System.out.println("Data berhasil direstore!");
+            return;
+        }
+    }
+
+    // TAMBAH DATA BARU
     data[jumlahData++] = new Mahasiswa(
             nim,
             nama,
@@ -281,7 +308,9 @@ static String inputString(String pesan) {
             uts,
             uas
     );
+
     simpanData();
+
     System.out.println("Data berhasil ditambahkan!");
 }
 
@@ -361,7 +390,12 @@ static void simpanData() {
 // Mengecek NIM sudah ada atau belum
 static boolean cekNIM(String nim) {
     for (int i = 0; i < jumlahData; i++) {
-        if (data[i] != null && data[i].nim.equals(nim)) {
+
+        // hanya cek data yang aktif
+        if (data[i] != null &&
+            data[i].aktif &&
+            data[i].nim.equals(nim)) {
+
             return true;
         }
     }
