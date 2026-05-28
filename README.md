@@ -1,6 +1,5 @@
 SISTEM MANAJEMEN NILAI MAHASISWA
 ============================================================
-
 Deskripsi Program
 ------------------------------------------------------------
 Program ini merupakan aplikasi berbasis Java Console untuk 
@@ -12,7 +11,6 @@ Soft Delete, Restore Data, serta Penyimpanan dan Pembacaan
 data menggunakan file teks.
 
 ============================================================
-
 Fitur Program
 ------------------------------------------------------------
 1. Tambah Data Mahasiswa
@@ -30,7 +28,6 @@ Fitur Program
 13. Simpan dan Load Data dari File TXT
 
 ============================================================
-
 Struktur Data
 ------------------------------------------------------------
 Class Mahasiswa memiliki atribut:
@@ -49,7 +46,6 @@ Data mahasiswa disimpan dalam:
 Mahasiswa[] data = new Mahasiswa[100];
 
 ============================================================
-
 Algoritma yang Digunakan
 ------------------------------------------------------------
 
@@ -73,7 +69,6 @@ Algoritma yang Digunakan
    - mengurutkan data berdasarkan Nama
 
 ============================================================
-
 Cara Menjalankan Program
 ------------------------------------------------------------
 
@@ -100,7 +95,6 @@ File yang Digunakan
    Penjelasan program dan instruksi penggunaan
 
 ============================================================
-
 Cara Kerja Penyimpanan Data
 ------------------------------------------------------------
 - Program menggunakan file teks:
@@ -118,7 +112,6 @@ Cara Kerja Penyimpanan Data
     program otomatis mengisi 30 data awal
 
 ============================================================
-
 Konsep Soft Delete
 ------------------------------------------------------------
 Data yang dihapus tidak benar-benar hilang.
@@ -131,7 +124,6 @@ Keuntungan:
 - riwayat data tetap tersimpan
 
 ============================================================
-
 Validasi Input
 ------------------------------------------------------------
 Program memiliki validasi:
@@ -141,19 +133,17 @@ Program memiliki validasi:
 - NIM tidak boleh duplikat
 
 ============================================================
-
 Author
 ------------------------------------------------------------
-Nama Kelompok : ......................
+Nama Kelompok : Kelompok 2
 Anggota :
-1. ..........................
-2. ..........................
-3. ..........................
+1. Asfa Zikry Al Fathir 
+2. Fairuz Nailah Muazarah
+3. Refaya Nindya Secondita
 
 Github:
-https://github.com/username/repository
+https://github.com/2510631250026-ai/Sistem-Manajemen-Nilai-Mahasiswa/blob/main/SistemManajemenNilaiMahasiswa
 
 ============================================================
-
 Terima Kasih
 ============================================================
